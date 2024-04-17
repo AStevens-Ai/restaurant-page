@@ -251,7 +251,7 @@ storeHours.forEach(item => {
 
     const hoursElement = document.createElement('p')
     hoursElement.classList.add('menu-price')
-    hoursElement.textContent = `'${item.hours}'`;
+    hoursElement.textContent = `${item.hours}`;
 
 
     hourDiv.appendChild(hourDayElement)

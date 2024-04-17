@@ -147,11 +147,15 @@ width: 100%;
 }
 
 .menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   padding: 20px;
   background-color:black;
   border-bottom: rgb(200, 45, 45) solid 3px;
 }
 .menu-text {
+  text-align: left;
   color: white;
   font-size: 18px;
   width: 300px;
@@ -159,7 +163,6 @@ width: 100%;
 .menu-container {
   display: grid;
   justify-items: center;
-  
   gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   min-width: 1000px;
@@ -171,6 +174,8 @@ width: 100%;
 
 .menu-price {
   color:rgb(200, 45, 45);
+  
+  text-align:left;
 }
 
 .aboutHeader{
