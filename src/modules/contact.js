@@ -6,7 +6,7 @@ class Hours {
   }
 }
 
-export function setupForm() {
+function setupForm() {
   const storeHours = [
     new Hours('Monday', '9:00 AM - 8:00 PM'),
     new Hours('Tuesday', '9:00 AM - 8:00 PM'),
@@ -56,9 +56,6 @@ export function setupForm() {
   // Add form to container
   divContainer.appendChild(form);
 
-  const nameForm = document.getElementById('name');
-  const emailForm = document.getElementById('email');
-
   const hoursDiv = document.createElement('div');
   hoursDiv.classList.add('hour-containerTwo');
   storeHours.forEach((item) => {
@@ -84,7 +81,13 @@ export function setupForm() {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     alert(
-      `Thank you for contacting us ${nameForm.value}! We will send an email to ${emailForm.value} to get back to you!`
+      `Thank you for contacting us ${nameInput.value}! We will send an email to ${emailInput.value} to get back to you!`
     );
+
+    nameInput.value = '';
+    emailInput.value = '';
+    textArea.value = '';
   });
 }
+
+export { setupForm };
